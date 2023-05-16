@@ -10,11 +10,11 @@ body {
     height: 80vh;
 }
 
-#main > #side {
+#side {
     position: absolute;
     left: 1%;
     top: 1%;
-    
+    font-size: 2vh;
 }
 
 #main > div{
