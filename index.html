@@ -9,22 +9,64 @@
 </head>
 <body>
     
+    <div id="side">
+        <p id="vibe" style="display: none;">🥶🧊</p>
+        <p id="time"></p>
+        <img id="pict" src="https://images.unsplash.com/photo-1615789591457-74a63395c990?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZG9tZXN0aWMlMjBjYXR8ZW58MHx8MHx8&w=1000&q=80" alt=""  width="10%" >
+        
+    </div>
     
 
     <div id="main">
         <div>
-            <div id="change-bg" class="button">Change Bg</div> <div id="change-pict" class="button">Change Picture</div> <div id="head" class="button">Header</div>
-            <div id="good-vibes" class="button">Good Vibes</div> <div id="hide-pict" class="button">Hide Picture</div> <div id="remve-head">Remove Header</div>
-            <div id="time" class="button">Time</div> <div id="show-pict">Show Picture</div> <div id="show-head" class="button">Show Header</div>
+            <div onclick="changeBg()" >Change Bg</div> <div onclick="changePict()" >Change Picture</div> <div onclick="createHeader()" >Header</div>
+            <div onclick="goodVibes()" >Good Vibes</div> <div onclick="hidePict()" >Hide Picture</div> <div onclick="removeHeader()">Remove Header</div>
+            <div onclick="time()" >Time</div> <div onclick="showPict()">Show Picture</div> <div onclick="showHeader()" >Show Header</div>
         </div>
+        
     </div>
+    
 
-    <div id="side">
-        <img src="https://images.unsplash.com/photo-1615789591457-74a63395c990?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZG9tZXN0aWMlMjBjYXR8ZW58MHx8MHx8&w=1000&q=80" alt=""  width="10%">
-
-    </div>
 </body>
 <script>
+
+function changeBg(){
+    document.body.style.backgroundColor = "grey"
+}
+
+function goodVibes(){
+    document.getElementById("vibe").style.display = "block"
+}
+
+function time(){
+    document.getElementById("time").innerHTML = Date()
+}
+
+function changePict(){
+    document.getElementById("pict").src = "https://img.freepik.com/free-photo/red-white-cat-i-white-studio_155003-13189.jpg?w=2000"
+}
+
+
+function hidePict(){
+    document.getElementById("pict").style.display = "none";
+}
+
+function showPict(){
+    document.getElementById("pict").style.display = "block";
+}
+
+function createHeader(){
+
+    document.getElementById("side").id = "head"
+}
+
+function removeHeader(){
+    document.getElementById("head").style.display = "none"
+}
+
+function showHeader(){
+    document.getElementById("head").style.display = "flex"
+}
 
 
 </script>
