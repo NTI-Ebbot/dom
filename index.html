@@ -12,13 +12,14 @@
     <div id="side">
         <p id="vibe" style="display: none;">🥶🧊</p>
         <p id="time"></p>
-        <img id="pict" src="https://images.unsplash.com/photo-1615789591457-74a63395c990?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZG9tZXN0aWMlMjBjYXR8ZW58MHx8MHx8&w=1000&q=80" alt=""  width="10%" >
+        <img id="pict" src="https://images.unsplash.com/photo-1615789591457-74a63395c990?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZG9tZXN0aWMlMjBjYXR8ZW58MHx8MHx8&w=1000&q=80" alt=""  width="10%"  > <!--Width så att bildstorleken beror på skärmstorlek  -->
         
     </div>
     
 
     <div id="main">
         <div>
+            <!-- Knappar -->
             <div onclick="changeBg()" >Change Bg</div> <div onclick="changePict()" >Change Picture</div> <div onclick="createHeader()" >Header</div>
             <div onclick="goodVibes()" >Good Vibes</div> <div onclick="hidePict()" >Hide Picture</div> <div onclick="removeHeader()">Remove Header</div>
             <div onclick="time()" >Time</div> <div onclick="showPict()">Show Picture</div> <div onclick="showHeader()" >Show Header</div>
@@ -30,40 +31,47 @@
 </body>
 <script>
 
+// Byter bakgrundsförg
 function changeBg(){
     document.body.style.backgroundColor = "grey"
 }
 
+// Visar element med idn "vibe"
 function goodVibes(){
     document.getElementById("vibe").style.display = "block"
 }
 
+// Ändrar innehållet för element med idn "time" till datorns tid
 function time(){
     document.getElementById("time").innerHTML = Date()
 }
 
+// Ändrar bilden
 function changePict(){
     document.getElementById("pict").src = "https://img.freepik.com/free-photo/red-white-cat-i-white-studio_155003-13189.jpg?w=2000"
 }
 
-
+// Gömmer bilden
 function hidePict(){
     document.getElementById("pict").style.display = "none";
 }
 
+// Visar bilden
 function showPict(){
     document.getElementById("pict").style.display = "block";
 }
 
+// Byter id på element med idn "side" till "head" för att ändra css stilen
 function createHeader(){
-
     document.getElementById("side").id = "head"
 }
 
+// Gömmer header
 function removeHeader(){
     document.getElementById("head").style.display = "none"
 }
 
+// Visar header
 function showHeader(){
     document.getElementById("head").style.display = "flex"
 }

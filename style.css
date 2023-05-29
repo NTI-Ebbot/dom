@@ -1,26 +1,32 @@
+/*Textstorlek basrad på skärstorlek(bredden). */
 body {
     font-size: 1vw;
 }
+
 
 p{
     width: 20vw;
 }
 
+/*Container, täcker hela sidan på höjden. Centrerar innehåll på höjden och bredden.  */
 #main {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 80vh;
+    height: 80vh; 
 }
 
+
+/*Container i vänstra hörnet  */
 #side {
     position: absolute;
     left: 1%;
     top: 1%;
     font-size: 2vh;
-    z-index: -1;
+    z-index: -1; /*Så att de inte täcker knapparna*/
 }
 
+/*Container ovanför #main. Centrerar innehåll på bredden i en kolumn.  */
 #head {
     width: 98vw;
     display: flex;
@@ -33,14 +39,17 @@ p{
     
 }
 
+/*Textstorlek basrad på skärstorlek(bredden). */
 #head > #vibe {
     font-size: 4vh;
 }
+
 
 #head > img {
     border: 4px solid olivedrab;
 }
 
+/*3x3 Rutnät. Centerar innehåll  */
 #main > div{
     background-color: blanchedalmond;    
     width: 50vw;
@@ -52,20 +61,22 @@ p{
 
 }
 
+/*Knapparna */
 #main > div > div {
     margin: auto;
     display: flex;
     height: 50%; width: 50%;
     background-color: blue;
     color: white;
-    border-radius: 10px;
+    border-radius: 10px; /*Rundade hörn */
     
     align-items: center;
     justify-content: center;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease; /*Fade effekt vid färgbyte */
     
 }
 
+/*Byter bakgrundsfärg när man håller över med musen  */
 #main > div > div:hover {
     
     background-color: purple;
